@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { emptyCart } from '../actions/cart';
-import {cartTotal, totalItems} from "../selectors/cartHelpers";
+import { cartTotal, totalItems } from "../selectors/cartHelpers";
 
 
 export class CartSummary extends React.Component {
@@ -10,14 +10,13 @@ export class CartSummary extends React.Component {
         this.state = {
         };
     }
-    
+
     onEmptyCart = () => {
         this.props.emptyCart();
     };
 
     onClickBack = () => {
         this.props.history.push("/checkout");
-
     };
     render() {
         const { items, sumItems, totalPrice } = this.props;
@@ -34,13 +33,12 @@ export class CartSummary extends React.Component {
               </div>
                 <div className="total">
                     <span className="total__calc">Cart Subtotal</span>
-                    {totalPrice > 0 && <span className="total__cash">Ksh {`${totalPrice} `}</span>}
+                    {totalPrice > 0 && <span className="total__cash"> {`$${totalPrice} `}</span>}
                 </div>
                 <div className="btn">
                     <button className="btn__empty btn-inline" onClick={this.onEmptyCart}>Empty Cart</button>
                     <button className="btn__check btn-inline" onClick={this.onClickBack}>Check Out</button>
                 </div>
-
             </div>
         );
     }

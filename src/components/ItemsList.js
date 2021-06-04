@@ -2,19 +2,14 @@ import React from "react";
 import ItemsListItem from './ItemsListItem'
 
 export const ItemsList = ({ items }) => {
-    console.log("items from itemlist", items)
-    let data = items;
     const removeDetails = (id) => {
-              document.getElementById(`${id}`).style.display = "none";
+        document.getElementById(`${id}`).style.display = "none";
 
     };
-
     const addDetails = (id) => {
-                   document.getElementById(`${id}`).style.display = "block";
-
+        document.getElementById(`${id}`).style.display = "block";
     };
     return (
-    
         <div className="shop">
             { items.length === 0 ? (
                 <h1>Loading ...</h1>
@@ -27,10 +22,8 @@ export const ItemsList = ({ items }) => {
                         addDetails={addDetails}
                     />
                 ))
-                  
             )
             }
-
         </div>
     );
 }

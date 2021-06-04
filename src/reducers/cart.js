@@ -10,8 +10,6 @@ export default (state = cartReducerDefaultState, action) => {
                 action.item
             ];
         case 'UPDATE_ITEM':
-            console.log('update item', action.updates);
-
             return state.map((cartItem) => {
                 if (cartItem.no === action.no) {
                     return {
@@ -22,9 +20,37 @@ export default (state = cartReducerDefaultState, action) => {
                     return cartItem;
                 };
             });
+        case 'INCREMENT_ITEM':
+            return state.map((cartItem) => {
+                if (cartItem.no === action.no) {
+                    let itemCost = action.pkg === "case" ? cartItem.cost.case : cartItem.cost.bottle;
+                    return {
+                        ...cartItem,
+                        quantity: cartItem.quantity + 1,
+                        total: cartItem.total + itemCost
+                    };
+                } else {
+                    return cartItem;
+                };
+            });
+        case 'DECREMENT_ITEM':
+            return state.map((cartItem) => {
+                if (cartItem.no === action.no) {
+                    let itemCost = action.pkg === "case" ? cartItem.cost.case : cartItem.cost.bottle;
+                    return {
+                        ...cartItem,
+                        quantity: cartItem.quantity - 1,
+                        total: cartItem.total - itemCost
+                    };
+                } else {
+                    return cartItem;
+                };
+            });
+        case 'REMOVE_ITEM':
+            return state.filter(({ no }) => no !== action.no);
         case 'EMPTY_CART':
             return [];
-           
+
         default:
             return state;
     }

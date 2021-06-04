@@ -1,18 +1,18 @@
 import React from 'react';
 import { connect } from 'react-redux'
-import { setTextFilter, sortByPrice,sortByVintage, clearFilters } from '../actions/filters';
+import { setTextFilter, sortByPrice, sortByVintage, clearFilters } from '../actions/filters';
 
 export class Filters extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-                      
+
         };
     }
 
     onTextChange = (tag) => {
         this.props.setTextFilter(tag);
-    };  
+    };
 
     onSortChange = (value) => {
         if (value === 'vintage') {
@@ -21,7 +21,7 @@ export class Filters extends React.Component {
             this.props.sortByPrice();
         }
     };
-    
+
     clearFilters = () => {
         this.props.clearFilters();
 
@@ -35,7 +35,7 @@ export class Filters extends React.Component {
                 </div>
                 <div className="tags">
                     {
-                        this.props.tags.map((tag,i) => (
+                        this.props.tags.map((tag, i) => (
                             <button
                                 key={i}
                                 className="tags__el"
@@ -48,8 +48,6 @@ export class Filters extends React.Component {
                     <span className="order__text">Order by:</span>
                     <button className="order__el" onClick={() => { this.onSortChange('price') }}> Price </button>
                     <button className="order__el" onClick={() => { this.onSortChange('vintage') }}> Vintage </button>
-                    {/* <span className="order__el" onClick={this.onSortChange('price')} >Price</span>
-                    <span className="order__el" onClick={this.onSortChange('vintage')}>Vintage</span> */}
                 </div>
             </div>
         );
@@ -66,7 +64,7 @@ const mapDispatchToProps = (dispatch) => ({
     sortByVintage: () => dispatch(sortByVintage()),
     sortByPrice: () => dispatch(sortByPrice()),
     clearFilters: () => dispatch(clearFilters()),
-    
+
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(Filters);

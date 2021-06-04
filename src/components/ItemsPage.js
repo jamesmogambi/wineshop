@@ -17,9 +17,8 @@ export class ItemsPage extends React.Component {
     componentWillMount() {
         this.props.getItems();
     }
-    
+
     render() {
-        console.log("render items", this.props.items)
         return (
             <div>
                 <div className="section">
@@ -37,7 +36,6 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => {
-    console.log(selectItems(state.items.items, state.filters))
     return {
         items: selectItems(state.items.items, state.filters),
     };

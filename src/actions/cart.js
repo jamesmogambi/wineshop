@@ -12,6 +12,26 @@ export const updateItem = (no, updates) => ({
     updates
 });
 
+// INCREMENT_ITEM
+export const incrementItem = (no,pkg) => ({
+    type: 'INCREMENT_ITEM',
+    no,
+    pkg
+});
+
+
+// DECREMENT_ITEM
+export const decrementItem = (no, pkg) => ({
+    type: 'DECREMENT_ITEM',
+    no,
+    pkg
+});
+
+// REMOVE_EXPENSE
+export const removeItem = (no) => ({
+    type: 'REMOVE_ITEM',
+    no
+});
 
 // EMPTY_CART
 export const emptyCart = () => ({
