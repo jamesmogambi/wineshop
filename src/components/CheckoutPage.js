@@ -31,7 +31,7 @@ const mapDispatchToProps = (dispatch) => ({
 });
 
 const mapStateToProps = (state) => {
-    console.log(selectItems(state.items.items, state.filters))
+    // console.log(selectItems(state.items.items, state.filters))
     return {
         items: selectItems(state.items.items, state.filters),
     };

@@ -22,7 +22,7 @@ export const CartItem = ({ item, incrementItem, decrementItem, removeItem }) => 
                 <button className="plus-btn cart-btn" type="button" name="button" onClick={() => incrementItem(no, pkg)}>
                     <img src="images/plus.svg" alt="" />
                 </button>
-                <input value={quantity} />
+                <input value={quantity} readOnly/>
                 <button className="minus-btn cart-btn" type="button" name="button" onClick={() => decrementItem(no, pkg)}>
                     <img src="images/minus.svg" alt="" />
                 </button>

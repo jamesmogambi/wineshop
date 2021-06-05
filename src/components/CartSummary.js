@@ -15,7 +15,7 @@ export class CartSummary extends React.Component {
         this.props.emptyCart();
     };
 
-    onClickBack = () => {
+    onClickCheckout = () => {
         this.props.history.push("/checkout");
     };
     render() {
@@ -28,7 +28,7 @@ export class CartSummary extends React.Component {
                     <span className="quantity__no">{items.length > 0 ? `${sumItems} ` : 'Empty'}</span>
                     <span className="quantity__txt">{items.length > 0 ? `${txt}` : 'Cart'}</span>
                 </div>
-                <div className="view">
+                <div className="view" onClick={this.onClickCheckout}>
                     View Cart
               </div>
                 <div className="total">
@@ -37,7 +37,7 @@ export class CartSummary extends React.Component {
                 </div>
                 <div className="btn">
                     <button className="btn__empty btn-inline" onClick={this.onEmptyCart}>Empty Cart</button>
-                    <button className="btn__check btn-inline" onClick={this.onClickBack}>Check Out</button>
+                    <button className="btn__check btn-inline" onClick={this.onClickCheckout}>Check Out</button>
                 </div>
             </div>
         );
