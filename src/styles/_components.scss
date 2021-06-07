@@ -1,3 +1,4 @@
+/// components.........
 //////////////////////////////////
 //Tags
 .tags {
@@ -151,7 +152,7 @@
       color: #fff;
     }
 
-     &:focus {
+    &:focus {
       outline: none;
       background-color: $color-dark;
       color: #fff;
@@ -219,8 +220,7 @@
 
   &__image {
     height: 20rem;
-    // margin-right: 20px;
-
+    // margin: 15px;
   }
   @media only screen and(max-width: $bp-small) {
     flex: 0 0 100%;
@@ -361,8 +361,7 @@
     width: 100%;
     text-align: center;
   }
-  &__details {
-  }
+
   &__back {
     border: none;
     background-color: $color-dark;
@@ -380,7 +379,8 @@
   position: absolute;
   z-index: 10;
 }
-
+//////////////////////////////////
+//Not-found
 #notfound {
   position: relative;
   height: 100vh;
@@ -473,16 +473,14 @@
   }
 }
 
-
-// form styles
+//////////////////////////////////
+//Form
 .row {
   display: -ms-flexbox; /* IE10 */
   display: flex;
   -ms-flex-wrap: wrap; /* IE10 */
   flex-wrap: wrap;
   margin-right: 20px;
-  // border: solid;
-  // margin: 0 -16px;
 }
 
 .col-25 {
@@ -513,7 +511,7 @@
   border-radius: 3px;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
@@ -521,16 +519,12 @@ input[type=text] {
   border-radius: 3px;
 }
 
-.delivery-notes{
+.delivery-notes {
   font-size: 15px;
-  // border-style: none;
-border: 1px solid #ccc;
+  border: 1px solid #ccc;
   border-radius: 3px;
   margin: 10px;
   min-height: 80px;
-  // margin-top: 30px;
-  // flex: 1;
-
 }
 textarea {
   width: 100%;
@@ -551,13 +545,10 @@ label {
 }
 
 .checkout-btn {
-  // background-color: #04AA6D;
   background-color: $color-dark;
-
   color: white;
   padding: 12px;
   margin: 10px 0;
-  // margin-right: 25%;
   border: none;
   width: 100%;
   border-radius: 3px;
@@ -566,13 +557,11 @@ label {
 }
 
 .checkout-btn:hover {
-  // background-color: #45a049;
   background-color: rgba(0, 0, 0, 0.418);
-
 }
 
 a {
-  color: #2196F3;
+  color: #2196f3;
 }
 
 hr {
@@ -584,13 +573,13 @@ span.price {
   color: grey;
 }
 
-
-.row label,input{
+.row label,
+input {
   font-size: 12px;
 }
 
-.row h3{
-font-size: 18px;
+.row h3 {
+  font-size: 18px;
 }
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 @media (max-width: 800px) {
@@ -599,78 +588,63 @@ font-size: 18px;
   }
   .col-25 {
     margin-bottom: 20px;
-    
   }
-  
 }
 
-// checkout
-// cart
+//////////////////////////////////
+//Cart
 .shopping-cart {
   width: 700px;
-  // height: 423px;
-  // margin: 80px auto;
-  background: #FFFFFF;
+  background: #ffffff;
   // box-shadow: 1px 2px 3px 0px rgba(0,0,0,0.10);
   border-radius: 6px;
-  box-shadow: 1px 2px 3px 3px rgba(0,0,0,0.10);
- 
+  box-shadow: 1px 2px 3px 3px rgba(0, 0, 0, 0.1);
+
   display: flex;
   flex-direction: column;
 }
 .title {
   height: 60px;
-  border-bottom: 1px solid #E1E8EE;
+  border-bottom: 1px solid #e1e8ee;
   padding: 20px 30px;
-  color: #5E6977;
+  color: #5e6977;
   font-size: 18px;
   font-weight: 400;
 }
- 
+
 .cart-item {
-  // padding: 20px 30px;
   height: 120px;
   display: flex;
-  // align-items: center;
-  // justify-content: center/;
-  border-top:  1px solid #E1E8EE;
-  border-bottom:  1px solid #E1E8EE;
+  border-top: 1px solid #e1e8ee;
+  border-bottom: 1px solid #e1e8ee;
 }
- 
+
 // .cart-item:nth-child(3) {
 //   border-top:  1px solid #E1E8EE;
 //   border-bottom:  1px solid #E1E8EE;
 // }
-  .cart-alert {
-    font-size: 1.75rem;
-    font-weight: 400;
-    // text-align: center;
+.cart-alert {
+  font-size: 1.75rem;
+  font-weight: 400;
+  // text-align: center;
   padding: 20px 30px;
-
-  }
+}
 .buttons {
   position: relative;
   padding-top: 40px;
   margin-right: 60px;
   margin-left: 20px;
-  // border: solid;
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
 }
 .delete-btn,
 .like-btn {
   display: inline-block;
-  Cursor: pointer;
+  cursor: pointer;
 }
 .delete-btn {
   width: 18px;
   height: 17px;
-  // background: url(&amp;quot;delete-icn.svg&amp;quot;) no-repeat center;
-  // background-image: url("/public/images/remove.svg") no-repeat center;
-
 }
- 
+
 .like-btn {
   position: absolute;
   top: 9px;
@@ -683,54 +657,55 @@ font-size: 18px;
 }
 .is-active {
   animation-name: animate;
-  animation-duration: .8s;
+  animation-duration: 0.8s;
   animation-iteration-count: 1;
   animation-timing-function: steps(28);
   animation-fill-mode: forwards;
 }
- 
+
 @keyframes animate {
-  0%   { background-position: left;  }
-  50%  { background-position: right; }
-  100% { background-position: right; }
+  0% {
+    background-position: left;
+  }
+  50% {
+    background-position: right;
+  }
+  100% {
+    background-position: right;
+  }
 }
 .cart-image {
-  // margin-right: 50px;
-  // border-style: solid;
   padding-top: 10px;
   padding-bottom: 10px;
-  width:100px;
-  height:120px;
-  
+  width: 100px;
+  height: 120px;
 }
- 
+
 //Let’s add some basic style to  product name and description.
 .description {
   padding-top: 10px;
   margin-right: 60px;
   width: 115px;
 }
- 
+
 .description span {
   display: block;
   font-size: 14px;
-  color: #43484D;
+  color: #43484d;
   font-weight: 400;
 }
- 
+
 .description span:first-child {
   margin-bottom: 5px;
 }
 .description span:last-child {
   font-weight: 300;
   margin-top: 8px;
-  color: #86939E;
+  color: #86939e;
 }
 .item-quantity {
   display: flex;
-  // padding-top: 20px;
   margin-right: 60px;
-  // border: solid;
   align-items: center;
   justify-content: center;
 }
@@ -740,26 +715,22 @@ font-size: 18px;
   text-align: center;
   width: 32px;
   font-size: 16px;
-  color: #43484D;
+  color: #43484d;
   font-weight: 300;
-  // margin-top: 10px;
 }
- 
-button[class*=cart-btn] {
+
+button[class*="cart-btn"] {
   width: 30px;
   height: 30px;
-  background-color: #E1E8EE;
+  background-color: #e1e8ee;
   border-radius: 6px;
   border: none;
   cursor: pointer;
 }
 .minus-btn img {
   width: 50%;
-  // margin-bottom: 3px;
-  //  margin-top: 2px;
-  // margin-left: 8px;
-  // margin-right: 8px;
 }
+
 .minus-btn {
   display: flex;
   justify-content: center;
@@ -767,42 +738,34 @@ button[class*=cart-btn] {
 }
 .plus-btn img {
   width: 35%;
-
-  // margin-top: 8px;
-  // margin-left: 8px;
-  //  margin: 5px 0px 0px 0px;
 }
- .plus-btn  {
-   display: flex;
-   justify-content: center;
-   align-items: center;
-   margin: 0px;
+.plus-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
 }
 button:focus,
 input:focus {
-  outline:0;
+  outline: 0;
 }
 .total-price {
   width: 83px;
-  // padding-top: 27px;
-  // text-align: center;
   font-size: 16px;
-  color: #43484D;
+  color: #43484d;
   font-weight: 300;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 .grand-total {
-  // text-align: center;
   display: flex;
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-
 }
 
-.grand-total button{
+.grand-total button {
   cursor: pointer;
 }
 @media (max-width: 800px) {
@@ -819,7 +782,6 @@ input:focus {
   .cart-image {
     padding-top: 0px;
     padding-bottom: 0px;
-    
   }
   .cart-image,
   .item-quantity,
@@ -837,28 +799,18 @@ input:focus {
   }
 }
 
-
-// checkout page
+//////////////////////////////////
+//Checkout page
 /* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other (also change the direction - make the "cart" column go on top) */
 
 .checkout-container {
   display: -ms-flexbox; /* IE10 */
   display: flex;
-  // justify-content: space-evenly;
-  // justify-content: left;
   align-items: flex-start;
   margin-top: 40px;
-  // -ms-flex-wrap: wrap; /* IE10 */
-  // flex-wrap: wrap;
-  // flex-direction: row;
-  // margin: 20px;
-  // margin: 0 -16px;
 }
 @media (max-width: 800px) {
   .checkout-container {
     flex-direction: column-reverse;
   }
-  // .col-25 {
-  //   margin-bottom: 20px;
-  // }
 }

@@ -11,19 +11,20 @@ export class ItemsPage extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            tags: ['White', 'Red', 'Sparkling'],
+            tags: ['White', 'Red', 'Sparkling', 'Vintage'],
         };
     }
     componentWillMount() {
         this.props.getItems();
     }
 
+    
     render() {
         return (
             <div>
                 <div className="section">
                     <Filters tags={this.state.tags} />
-                    <CartSummary history={this.props.history} />
+                    <CartSummary history={this.props.history} onEmptyCart={this.onEmptyCart} />
                 </div>
                 <ItemsList items={this.props.items} />
             </div>
@@ -33,6 +34,7 @@ export class ItemsPage extends React.Component {
 
 const mapDispatchToProps = (dispatch) => ({
     getItems: () => dispatch(getItems()),
+
 });
 
 const mapStateToProps = (state) => {

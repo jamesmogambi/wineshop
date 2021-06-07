@@ -9,6 +9,7 @@ export const ItemsList = ({ items }) => {
     const addDetails = (id) => {
         document.getElementById(`${id}`).style.display = "block";
     };
+
     return (
         <div className="shop">
             { items.length === 0 ? (

@@ -15,11 +15,8 @@ export class Filters extends React.Component {
     };
 
     onSortChange = (value) => {
-        if (value === 'vintage') {
-            this.props.sortByVintage();
-        } else if (value === 'price') {
-            this.props.sortByPrice();
-        }
+        this.props.sortByPrice();
+
     };
 
     clearFilters = () => {
@@ -47,7 +44,7 @@ export class Filters extends React.Component {
                 <div className="order">
                     <span className="order__text">Order by:</span>
                     <button className="order__el" onClick={() => { this.onSortChange('price') }}> Price </button>
-                    <button className="order__el" onClick={() => { this.onSortChange('vintage') }}> Vintage </button>
+                    {/* <button className="order__el" onClick={() => { this.onTextChange('vintage') }}> Vintage </button> */}
                 </div>
             </div>
         );

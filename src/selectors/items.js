@@ -34,11 +34,12 @@ export default (items, { text, sortBy }) => {
             });
     } else {
         if (sortBy === 'price') {
-            let sortedItems = items.sort((a, b) => {
+                    return items.map((item) => {
+                return item;
+            }).sort((a, b) => {
                 return b.cost.bottle < a.cost.bottle ? 1 : -1;
             });
-            console.log('sorted items!!!', sortedItems);
-            return sortedItems;
+           
         }
         else {
             return items;

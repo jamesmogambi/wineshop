@@ -19,12 +19,7 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         sortBy: 'price'
       };
-    case 'SORT_BY_VINTAGE':
-      return {
-        ...state,
-        sortBy: 'vintage'
-      };
-    case 'CLEAR_FILTERS':
+       case 'CLEAR_FILTERS':
       return {
         ...state,
         text: '',

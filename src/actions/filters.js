@@ -9,10 +9,6 @@ export const sortByPrice = () => ({
   type: 'SORT_BY_PRICE'
 });
 
-// SORT_BY_VINTAGE
-export const sortByVintage = () => ({
-  type: 'SORT_BY_VINTAGE'
-});
 
 // SET_END_DATE
 export const clearFilters = () => ({

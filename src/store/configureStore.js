@@ -27,14 +27,4 @@ const pReducer = persistReducer(persistConfig, rootReducer);
   );
 const persistor = persistStore(store);
 export { persistor, store };
-// export default () => {
-//   const store = createStore(
-//     combineReducers({
-//       items: itemsReducer,
-//       filters: filtersReducer,     
-//     }),
-//     composeEnhancers(applyMiddleware(thunk))
-//   );
 
-//   return store;
-// };
